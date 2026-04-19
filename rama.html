@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shorts App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: black;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    #shortsContainer {
+      width: 100%;
+    }
+
+    .videoWrapper {
+      height: 100vh;
+      position: relative;
+      scroll-snap-align: start;
+    }
+
+    .video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .title {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+ <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay muted loop></video>
+  <div id="shortsContainer"></div>
+
+  <!-- <script> -->
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const videos = [
+        {
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+          title: "Coding Short 💻"
+        },
+        {
+          url: "https://www.w3schools.com/html/movie.mp4",
+          title: "Travel Short ✈️"
+        },
+        {
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+          title: "Fun Short 😄"
+        }
+      ];
+
+      const container = document.getElementById("shortsContainer");
+
+      videos.forEach((video) => {
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("videoWrapper");
+
+        wrapper.innerHTML = `
+          <video class="video" src="${video.url}" loop muted playsinline></video>
+          <div class="title">${video.title}</div>
+        `;
+
+        container.appendChild(wrapper);
+      });
+
+      const allVideos = document.querySelectorAll(".video");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        { threshold: 0.7 }
+      );
+
+      allVideos.forEach((video) => observer.observe(video));
+
+    });
+  <!-- </script> -->
+
+</body>
+</html>

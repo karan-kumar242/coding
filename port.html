@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(90deg,rgba(1, 1, 28, 1) 100%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #111111;
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    #home {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      color: white;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+
+    /* Card Hover */
+    .card:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+   
+
+
+    #projects .card {
+  background: linear-gradient(135deg, #1c1c1c, #2c2c2c); /* blackish gradient */
+  color: #ffffff; /* text color fixed white */
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Heading color fix */
+#projects .card h4 {
+  color: #ffffff;
+}
+
+/* Paragraph color fix */
+#projects .card p {
+  color: #cccccc;
+}
+
+/* ✨ Hover effect (optional) */
+#projects .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">MyPortfolio</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home">
+    <div>
+      <h1>Hello, I'm Karan 👋</h1>
+      <p>Web Developer | Designer | Coder</p>
+      <button class="btn btn-light mt-3" onclick="scrollToSection('projects')">View Work</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container text-center">
+    <h2>About Me</h2>
+    <p>I am a passionate developer learning Web Development, DSA and building cool projects.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" >
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h4>Portfolio Website</h4>
+            <p>Personal responsive portfolio using HTML CSS Bootstrap</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h4>Chat App</h4>
+            <p>Basic chat application using C language</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h4>Game Project</h4>
+            <p>2D game development using C programming</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container text-center">
+    <h2>Contact Me</h2>
+    <input type="text" class="form-control my-2" placeholder="Your Name">
+    <input type="email" class="form-control my-2" placeholder="Your Email">
+    <textarea class="form-control my-2" placeholder="Message"></textarea>
+    <button class="btn btn-primary">Send</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Karan Kumar | All Rights Reserved</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
