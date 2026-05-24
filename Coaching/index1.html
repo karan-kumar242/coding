@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Coding School</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    
+   .navbar {
+  background-color: #020617 !important;
+  position: fixed;  
+  top: 0;            
+  left: 0;
+  width: 100%;       
+  z-index: 9999;    
+}
+
+    .navbar .nav-link {
+      color: #cbd5f5;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #22c55e !important;
+    }
+
+    nav img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .mine {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    .tag h4 {
+      background: #1e293b;
+      color: #cbd5f5;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    /* Colors */
+    .green {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .gray {
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+
+    /* Card */
+    .card {
+      background-color: #020617;
+      color: white;
+      border: 1px solid #1e293b;
+    }
+
+    .right img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .image-bottom h4 {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    /* Buttons */
+    .btn-success {
+      background-color: #22c55e;
+      border: none;
+    }
+
+    .btn-outline-dark {
+      border-color: #cbd5f5;
+      color: #cbd5f5;
+    }
+
+    .btn-outline-dark:hover {
+      background-color: #cbd5f5;
+      color: black;
+    }
+
+    .text-muted {
+      color: #94a3b8 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal fade" id="buyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: #0f172a;">Buy Course</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p style="color: black;">🚀 Aap “Job Ready Cohort 2.0” buy karna chahte ho?</p>
+        <h4 class="text-success">₹5999 Only</h4>
+        <p style="color: #020617;">Limited seats available!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <a href="index7.html" class="btn btn-success">Confirm Buy</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg shadow-sm" style="position: sticky;">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+      <img src="https://avatars.githubusercontent.com/u/69582226?v=4">
+      <strong>Karan Coding School</strong>
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-3">
+
+        <li class="nav-item"><a class="nav-link" href="index1.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index2.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="index4.html">Cohort 2.0</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Request Callback</a></li>
+        <li class="nav-item"><a class="nav-link" href="index5.html">Class Room</a></li>
+
+        <li><i class="fa fa-signal text-light"></i></li>
+        <li><img class="mine" src="https://i.ytimg.com/vi/J_r6hBo9lO4/hqdefault.jpg"></li>
+          <li>
+  <a href="index6.html" style="color:white; text-decoration:none;">
+    <i class="fa fa-phone text-light"></i>
+  </a>
+</li>
+        <li><i class="fa fa-bell text-light"></i></li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <div style="margin: 20px auto; padding: 10px; max-width: 800px; text-align: center;">
+  <h2 style="
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #1e293b;
+     background-color: #0f172a;
+     background: linear-gradient(45deg, #00c6ff, #0072ff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  ">
+    “The crown is not for those who wait, it belongs to those who create their fate.”
+  </h2>
+</div>
+
+<main class="container mt-5">
+
+  <section class="row align-items-center g-5">
+
+    <!-- Left -->
+    <div class="col-lg-6">
+      <h1 class="fw-bold">
+        2.0 Job Ready AI powered cohort Complete Web Development + DSA Gen-AI + Amplitude
+      </h1>
+
+      <div class="tag mt-3">
+        <h4>MERN STACK</h4>
+        <h4>DSA with JS</h4>
+        <h4>Placement focused</h4>
+        <h4>Aptitude and Reasoning</h4>
+      </div>
+
+      <h3 class="mt-3">
+        Price <span class="green">₹5999</span>
+        <span class="gray">₹11999</span> (+GST)
+      </h3>
+
+      <h5>Scratch Card in the End</h5>
+
+      <div class="mt-3">
+       <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#buyModal">
+  Buy Now
+</button>
+        <a href="index2.html" 
+   class="btn btn-outline-dark" 
+   style="text-decoration:none;">
+   View Syllabus
+</a>
+      </div>
+
+      <h6 class="mt-3">
+        Batch Starts on <span class="green">16th june</span>
+      </h6>
+    </div>
+
+    
+    <div class="col-lg-6">
+      <div class="card p-3 shadow-sm">
+         <div class="container mt-5">
+  <div class="ratio ratio-16x9">
+     <iframe 
+  src="https://www.youtube.com/embed/J_l-sFYe450"
+  title="YouTube video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+  </div>
+</div>
+        <div class="image-bottom mt-3">
+          <h4>Language <span class="green">Hinglish</span></h4>
+          <h4>Certification <span class="green">Yes</span></h4>
+          <h4>Schedule <span class="green">Mon-Sat (8:30pm)</span></h4>
+          <h4>Total Content <span class="green">250+</span></h4>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
+  <section class="text-center mt-5">
+    <h1 style="
+  font-size:60px;
+  font-weight:bold;
+  background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+  background-size:cover;
+  background-position:center;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+">
+  Get Placed.
+</h1>
+    <h3 class="text-muted">with job ready AI powered cohort</h3>
+  </section>
+
+ 
+<section class="container-fluid" 
+         style="background-color: #0f172a; border: 3px solid #0f172a; margin-top: 20px;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-12 col-md-6 text-center mb-3 mb-md-0">
+        <img src="image.png" 
+             class="img-fluid rounded-circle"
+             style="height:150px; width:150px; object-fit: cover;" />
+      </div>
+
+      <div class="col-12 col-md-6 text-center text-md-start">
+        <h2>About Me</h2>
+        <p>I am a coding tutor specializing in the AI ML,JAVA,DSA,MERN stack (MongoDB, Express.js, React, and Node.js) with Coding OTT. I teach students how to build modern, full-stack web applications in a simple and practical way. My approach focuses on hands-on learning, real-world projects, and strong fundamentals so that students can confidently develop scalable applications. Along with technical skills, I also guide learners in problem-solving, project building, and interview preparation to help them grow into successful developers.</p>
+        <h2>SIR ANUJ PATEL</h2>
+        <p>enterpernuer</p>
+        <p>HOD of this paltform</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <footer class="mt-5 pt-5 pb-3" style="background-color:#020617; color:#cbd5f5;">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-white">Karan Coding School</h5>
+        <p>
+          Learn coding with job-ready skills. हम आपको real-world projects 
+          aur placement-focused training provide karte hain.
+        </p>
+      </div>
+
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="text-white">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index1.html" style="color:#cbd5f5; text-decoration:none;">Home</a></li>
+          <li><a href="index2.html" style="color:#cbd5f5; text-decoration:none;">Courses</a></li>
+          <li><a href="index4.html" style="color:#cbd5f5; text-decoration:none;">Cohort</a></li>
+          <li><a href="index6.html" style="color:#cbd5f5; text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="text-white">Courses</h5>
+        <ul class="list-unstyled">
+          <li>MERN Stack</li>
+          <li>DSA with JS</li>
+          <li>AI & GenAI</li>
+          <li>Aptitude</li>
+        </ul>
+      </div>
+
+    
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="text-white">Follow Us</h5>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" style="color:#cbd5f5;"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" style="color:#cbd5f5;"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" style="color:#cbd5f5;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="#" style="color:#cbd5f5;"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <hr style="border-color:#1e293b;">
+
+    <div class="text-center">
+      <p class="mb-0">
+        © 2026 Karan Coding School | All Rights Reserved
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

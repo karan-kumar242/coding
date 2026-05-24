@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    
+   .navbar {
+  background-color: #020617 !important;
+  position: fixed;  
+  top: 0;            
+  left: 0;
+  width: 100%;       
+  z-index: 9999;    
+}
+
+    .navbar .nav-link {
+      color: #cbd5f5;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #22c55e !important;
+    }
+
+    nav img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .mine {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    .tag h4 {
+      background: #1e293b;
+      color: #cbd5f5;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .card{
+      background:#020617;
+      border:1px solid #1e293b;
+      color:#fff;
+      border-radius:15px;
+    }
+
+    .icon-box{
+      font-size:30px;
+      color:#22c55e;
+    }
+
+    .form-control{
+      background:#0f172a;
+      border:1px solid #1e293b;
+      color:#fff;
+    }
+
+    .form-control:focus{
+      box-shadow:none;
+      border-color:#22c55e;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm" style="position: sticky;">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+      <img src="https://avatars.githubusercontent.com/u/69582226?v=4">
+      <strong>Karan Coding School</strong>
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-3">
+
+        <li class="nav-item"><a class="nav-link" href="index1.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index2.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="index4.html">Cohort 2.0</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Request Callback</a></li>
+        <li class="nav-item"><a class="nav-link" href="index5.html">Class Room</a></li>
+
+        <li><i class="fa fa-signal text-light"></i></li>
+        <li><img class="mine" src="https://i.ytimg.com/vi/J_r6hBo9lO4/hqdefault.jpg"></li>
+       <li>
+  <a href="index6.html" style="color:white; text-decoration:none;">
+    <i class="fa fa-phone text-light"></i>
+  </a>
+</li>
+        <li><i class="fa fa-bell text-light"></i></li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="container py-5">
+
+  <h2 class="text-center mb-4">📞 Contact Us</h2>
+
+  <div class="row g-4">
+
+    <!-- Contact Info -->
+    <div class="col-lg-4">
+      <div class="card p-4 text-center">
+        <div class="icon-box mb-2">
+          <i class="fa fa-phone"></i>
+        </div>
+        <h5>Phone</h5>
+        <p>+91 8434085292</p>
+      </div>
+
+      <div class="card p-4 text-center mt-3">
+        <div class="icon-box mb-2">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <h5>Email</h5>
+        <p>karan Coding Ott @gamil.com</p>
+      </div>
+
+      <div class="card p-4 text-center mt-3">
+        <div class="icon-box mb-2">
+          <i class="fa fa-location-dot"></i>
+        </div>
+        <h5>Address</h5>
+        <p>Darbhanga, Bihar, India</p>
+      </div>
+    </div>
+
+    
+    <div class="col-lg-8">
+      <div class="card p-4">
+        <h4 class="mb-3">Send Message</h4>
+
+        <input type="text" class="form-control mb-3" placeholder="Your Name">
+        <input type="email" class="form-control mb-3" placeholder="Your Email">
+        <input type="text" class="form-control mb-3" placeholder="Subject">
+
+        <textarea class="form-control mb-3" rows="5" placeholder="Your Message" id="mh"></textarea>
+
+        <button class="btn btn-success w-100" onclick="send()">Send Message</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="text-center p-3" style="background:#020617;">
+  © 2026 Karan Coding School
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+ function send() {
+  let msg = document.getElementById("mh").value.trim();
+
+  if (msg === "") {
+    alert("Please write the message");
+  } else {
+    alert("Message is successfully sent");
+  }
+}
+</script>
+
+</body>
+</html>

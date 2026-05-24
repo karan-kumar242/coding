@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Courses</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+    }
+
+      .navbar {
+  background-color: #020617 !important;
+  position: fixed;  
+  top: 0;            
+  left: 0;
+  width: 100%;       
+  z-index: 9999;    
+}
+
+
+    .navbar .nav-link {
+      color: #cbd5f5 !important;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #22c55e !important;
+    }
+
+    nav img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .mine {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    .tag h4 {
+      background: #1e293b;
+      color: #cbd5f5;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    /* Colors */
+    .green {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .gray {
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+    .card {
+      background-color: #020617;
+      border: 1px solid #1e293b;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .price {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .btn-success {
+      background-color: #22c55e;
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #16a34a;
+    }
+
+    .badge-custom {
+      background-color: #1e293b;
+      color: #cbd5f5;
+      margin: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm" style="position: sticky;">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+      <img src="https://avatars.githubusercontent.com/u/69582226?v=4">
+      <strong>Karan Coding School</strong>
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-3">
+
+        <li class="nav-item"><a class="nav-link" href="index1.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index2.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="index4.html">Cohort 2.0</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Request Callback</a></li>
+        <li class="nav-item"><a class="nav-link" href="index5.html">Class Room</a></li>
+
+        <li><i class="fa fa-signal text-light"></i></li>
+        <li><img class="mine" src="https://i.ytimg.com/vi/J_r6hBo9lO4/hqdefault.jpg"></li>
+          <li>
+  <a href="index6.html" style="color:white; text-decoration:none;">
+    <i class="fa fa-phone text-light"></i>
+  </a>
+</li>
+        <li><i class="fa fa-bell text-light"></i></li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="container text-center mt-5">
+  <h1 class="fw-bold">Our Courses</h1>
+  <p class="text-muted">Choose your career path 🚀</p>
+</div>
+
+<!-- Courses -->
+<div class="container mt-4">
+  <div class="row g-4">
+
+    <!-- Course 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/web-development-concept-illustration_114360-1025.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">MERN Stack Development</h4>
+        <p>Become full stack developer using MongoDB, Express, React, Node.</p>
+
+        <div>
+          <span class="badge badge-custom">React</span>
+          <span class="badge badge-custom">Node</span>
+          <span class="badge badge-custom">MongoDB</span>
+        </div>
+
+        <h5 class="price mt-2">₹4999</h5>
+
+          <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">DSA with JavaScript</h4>
+        <p>Master Data Structures & Algorithms for placements.</p>
+
+        <div>
+          <span class="badge badge-custom">DSA</span>
+          <span class="badge badge-custom">Logic</span>
+          <span class="badge badge-custom">Coding</span>
+        </div>
+
+        <h5 class="price mt-2">₹2999</h5>
+
+           <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/artificial-intelligence-concept-illustration_114360-7000.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">AI & GenAI</h4>
+        <p>Learn Artificial Intelligence & build AI projects.</p>
+
+        <div>
+          <span class="badge badge-custom">AI</span>
+          <span class="badge badge-custom">Python</span>
+          <span class="badge badge-custom">ML</span>
+        </div>
+
+        <h5 class="price mt-2">₹5999</h5>
+
+          <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+    <!-- Course 4 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/online-test-concept-illustration_114360-5553.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">Aptitude & Reasoning</h4>
+        <p>Prepare for placement exams with tricks & shortcuts.</p>
+
+        <div>
+          <span class="badge badge-custom">Math</span>
+          <span class="badge badge-custom">Logic</span>
+          <span class="badge badge-custom">Speed</span>
+        </div>
+
+        <h5 class="price mt-2">₹1999</h5>
+
+          <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+    <!-- Course 5 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/app-development-concept-illustration_114360-5164.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">Frontend Development</h4>
+        <p>Master HTML, CSS, JS & build responsive websites.</p>
+
+        <div>
+          <span class="badge badge-custom">HTML</span>
+          <span class="badge badge-custom">CSS</span>
+          <span class="badge badge-custom">JS</span>
+        </div>
+
+        <h5 class="price mt-2">₹2499</h5>
+
+           <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+    
+    <div class="col-lg-4 col-md-6">
+      <div class="card p-3">
+        <img src="https://img.freepik.com/free-vector/database-storage-concept-illustration_114360-2592.jpg" class="img-fluid rounded">
+        <h4 class="mt-3">Backend Development</h4>
+        <p>Learn APIs, databases, authentication & deployment.</p>
+
+        <div>
+          <span class="badge badge-custom">Node</span>
+          <span class="badge badge-custom">API</span>
+          <span class="badge badge-custom">DB</span>
+        </div>
+
+        <h5 class="price mt-2">₹3999</h5>
+
+           <a href="index3.html" 
+              class="btn btn-success w-100 mt-2" 
+              style="text-decoration:none;">
+              View Details
+              </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 p-3" style="background:#020617;">
+  <p class="mb-0">© 2026 Karan Coding School</p>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>

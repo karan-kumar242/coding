@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Result</title>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+input {
+  padding: 8px;
+  margin: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+table {
+  margin: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Student Result Search</h2>
+
+<input type="text" id="regNo" placeholder="Enter Registration No">
+<button onclick="searchResult()">Search</button>
+
+<div id="studentInfo"></div>
+
+<table>
+   <!-- <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Internal</th>
+      <th>External</th>
+      <th>Total</th>
+      <th>Grade</th>
+    </tr>
+  </thead>  -->
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+
+let students = [
+  {
+    name: "Karan",
+    regNo: "101",
+    subjects: [
+      { sub: "Math", internal: 20, external: 60, total: 80, grade: "A" },
+      { sub: "Physics", internal: 18, external: 55, total: 73, grade: "B" },
+      { sub: "Chemistry", internal: 19, external: 58, total: 77, grade: "A" },
+      { sub: "English", internal: 22, external: 65, total: 87, grade: "A+" },
+      { sub: "CS", internal: 21, external: 70, total: 91, grade: "A+" }
+    ]
+  },
+  {
+    name: "Rahul",
+    regNo: "102",
+    subjects: [
+      { sub: "Math", internal: 15, external: 50, total: 65, grade: "B" },
+      { sub: "Physics", internal: 14, external: 45, total: 59, grade: "C" },
+      { sub: "Chemistry", internal: 16, external: 48, total: 64, grade: "B" },
+      { sub: "English", internal: 20, external: 60, total: 80, grade: "A" },
+      { sub: "CS", internal: 19, external: 55, total: 74, grade: "B" }
+    ]
+  }
+];
+let isVisible = false;
+
+function searchResult() {
+
+  let regNo = document.getElementById("regNo").value;
+  let tableBody = document.getElementById("tableBody");
+  let studentInfo = document.getElementById("studentInfo");
+
+  tableBody.innerHTML = "";
+  studentInfo.innerHTML = "";
+
+  let found = false;
+   if (isVisible) {
+    tableBody.innerHTML = "";
+    studentInfo.innerHTML = "";
+    isVisible = false;
+    return;
+  }
+
+   for (let i = 0; i < students.length; i++) {
+
+    if (students[i].regNo === regNo) {
+
+     
+       found = true;
+      isVisible = true;
+    
+      studentInfo.innerHTML = `
+        <h2>${students[i].name}</h2>
+        <h3>Reg No: ${students[i].regNo}</h3>
+      `;
+
+      
+      for (let j = 0; j < students[i].subjects.length; j++) {
+
+        let sub = students[i].subjects[j];
+
+        let row = "";
+
+    if (j === 0) {
+  row += `
+    <thead class="table-dark">
+      <tr>
+        <th>Subject</th>
+        <th>Internal</th>
+        <th>External</th>
+        <th>Total</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+  `;
+}
+
+row += `
+  <tr>
+    <td>${sub.sub}</td>
+    <td>${sub.internal}</td>
+    <td>${sub.external}</td>
+    <td>${sub.total}</td>
+    <td>${sub.grade}</td>
+  </tr>
+`;
+
+        tableBody.innerHTML += row;
+      }
+
+      break; 
+    }
+  }
+
+  if (!found) {
+    tableBody.innerHTML = "<tr><td colspan='5'>No Record Found</td></tr>";
+    isVisible = true;
+  }
+}
+
+</script>
+
+</body>
+</html>
+<!-- note import { useState } from "react";
+
+function App() {
+
+  const [regNo, setRegNo] = useState("");
+  const [student, setStudent] = useState(null);
+
+  const students = [
+    {
+      name: "Karan",
+      regNo: "101",
+      subjects: [
+        { sub: "Math", internal: 20, external: 60, total: 80, grade: "A" },
+        { sub: "Physics", internal: 18, external: 55, total: 73, grade: "B" },
+        { sub: "Chemistry", internal: 19, external: 58, total: 77, grade: "A" },
+        { sub: "English", internal: 22, external: 65, total: 87, grade: "A+" },
+        { sub: "CS", internal: 21, external: 70, total: 91, grade: "A+" }
+      ]
+    },
+    {
+      name: "Rahul",
+      regNo: "102",
+      subjects: [
+        { sub: "Math", internal: 15, external: 50, total: 65, grade: "B" },
+        { sub: "Physics", internal: 14, external: 45, total: 59, grade: "C" },
+        { sub: "Chemistry", internal: 16, external: 48, total: 64, grade: "B" },
+        { sub: "English", internal: 20, external: 60, total: 80, grade: "A" },
+        { sub: "CS", internal: 19, external: 55, total: 74, grade: "B" }
+      ]
+    }
+  ];
+
+  // 🔥 for loop + if condition search
+  const searchResult = () => {
+    let foundStudent = null;
+
+    for (let i = 0; i < students.length; i++) {
+      if (students[i].regNo === regNo) {
+        foundStudent = students[i];
+        break;
+      }
+    }
+
+    setStudent(foundStudent);
+  };
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h2>Student Result Search</h2>
+
+      <input
+        type="text"
+        placeholder="Enter Registration No"
+        value={regNo}
+        onChange={(e) => setRegNo(e.target.value)}
+      />
+
+      <button onClick={searchResult}>Search</button>
+
+      {student ? (
+        <>
+          <h2>{student.name}</h2>
+          <h3>Reg No: {student.regNo}</h3>
+
+          <table border="1" style={{ margin: "auto" }}>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Internal</th>
+                <th>External</th>
+                <th>Total</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              {student.subjects.map((sub, index) => (
+                <tr key={index}>
+                  <td>{sub.sub}</td>
+                  <td>{sub.internal}</td>
+                  <td>{sub.external}</td>
+                  <td>{sub.total}</td>
+                  <td>{sub.grade}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      ) : (
+        <p>No Record Found</p>
+      )}
+    </div>
+  );
+}
+
+export default App; -->
